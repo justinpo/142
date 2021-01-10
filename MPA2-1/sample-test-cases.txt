@@ -1,0 +1,133 @@
+5
+for(int i=0; i<n; i++){
+    sum = i;
+    sum = sum + 2;
+    sum += 9;
+}
+T(n) = 6n + 2
+
+4
+for (int i = 5; i <= 10; i++) {
+    b += a;
+    a--;
+}
+T(n) = 26
+
+5
+for (int i = 7; i <= n; i++) {
+    b *= 3 + c
+    b += a;
+    a--;
+}
+T(n) = 6n - 34
+
+5
+for (int i = 1; i <= n; i *= 2) {
+    b += a;
+    a--;
+    a = b + c + f;
+}
+T(n) = 7 log(2) n  + 2
+
+7
+for (int i = 1; i <= n; i *= 5) {
+    a = 2 * b;
+    a = a + c + f;
+    b *= 3 + c
+   b += a;
+    a--;
+}
+T(n) = 11 log(5) n  + 2
+
+5
+for (int i = 2; i <= n; i += 5) {
+    b += a;
+    a--;
+    a = b + c + f;
+}
+T(n) = 7n/5 - 5
+
+3
+for (int i = n; i <= 1; i--) {
+
+}
+4
+for (int i = n; i <= 1; i /= 3) {
+    a = 2 * b;
+    b *= 3 + c
+}
+T(n) = 2
+
+4
+for (int i = 1; i * i <= n; i++) {
+    a = 2 * b;
+    a = a + c + f;
+}
+T(n) = 8 sqrt(n) + 3
+
+3
+for (int i = 1; i <= n; i--) {
+    a = 2 * b;
+}
+Infinite
+
+11
+if(i>1){
+    a++;
+    b++;
+}else{
+    c++;
+}
+for (int i = 7; i <= n; i++) {
+    b *= 3 + c
+    b += a;
+    a--;
+}
+T(n) = 6n - 31
+
+7
+if(i==1){
+a++
+}
+for (int i = 1; i * i <= n; i++) {
+    a = 2 * b;
+    a = a + c + f;
+}
+T(n) = 8 sqrt(n) + 5
+
+7
+int x = 1;
+int y = 2;
+if(i>1){
+    a++;
+    b++;
+}
+    d++
+T(n) = 6
+
+9
+int x;
+int y;
+if(i>1){
+    a++;
+    b++;
+}else{
+    c++
+}
+    d++
+T(n) = 4
+
+11
+int x = 1;
+for(int i=0; i<=n; i++){
+  a++
+
+  if (x == 1){
+    x*=1;
+  }
+  else{
+    x+=1;
+    x/=2;
+  }
+}
+T(n) = 6n + 9
