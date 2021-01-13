@@ -1,5 +1,6 @@
 from loop import *
 
+
 class Term:
     def __init__(self, string: str):
         self._coefficient = 0
@@ -8,13 +9,18 @@ class Term:
 
         coefPos: int = -1
         for i in range(len(string)):
-            if((string[i] >= '0' and string[i] <= '9' and string[i+1] != ')' and string[i-1] != '/') or string[i] == '-'):
+            if (
+                string[i] >= "0"
+                and string[i] <= "9"
+                and string[i + 1] != ")"
+                and string[i - 1] != "/"
+            ) or string[i] == "-":
                 coefPos += 1
             else:
                 self._var += string[i:][:1]
 
         if coefPos != -1:
-            self._coefficient = int(string[:coefPos+1])
+            self._coefficient = int(string[: coefPos + 1])
 
     def setCoefficient(self, coef: int) -> bool:
         self._coefficient = coef
@@ -49,9 +55,9 @@ class Polynomial:
         temp: str = ""
 
         for i, ch in enumerate(string):
-            if ch != '+' and ch != '-':
+            if ch != "+" and ch != "-":
                 temp += string[i:][:1]
-            elif ch == '-':
+            elif ch == "-":
                 term = Term(temp)
                 self._polynomial.append(term)
                 temp = ""
@@ -60,7 +66,7 @@ class Polynomial:
                 term = Term(temp)
                 self._polynomial.append(term)
                 temp = ""
-        
+
         term = Term(temp)
         self._polynomial.append(term)
 
@@ -77,16 +83,16 @@ class Polynomial:
                         self._polynomial.remove(self._polynomial[j])
                         j -= 1
                     j += 1
-                
+
                 self._polynomial[i].setCoefficient(currCoef)
             else:
                 break
-    
+
     def __str__(self):
         string: str = ""
         for i, term in enumerate(self._polynomial):
             if term.getCoefficient() < 0 and i > 0:
-                term.setCoefficient(term.getCoefficient()*-1)
+                term.setCoefficient(term.getCoefficient() * -1)
                 string += "- "
             elif term.getCoefficient() > 0 and i > 0:
                 string += "+ "
